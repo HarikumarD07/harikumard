@@ -157,7 +157,7 @@
   /* ---------------------------------------------------------------- */
   var contactForm = document.getElementById("contactForm");
   var formSuccess = document.getElementById("formSuccess");
-  var CONTACT_EMAIL = "harikumard07@gmail.com";
+  var CONTACT_EMAIL = "contact@harikumard.com";
 
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
