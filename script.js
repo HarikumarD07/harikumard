@@ -157,7 +157,7 @@
   /* ---------------------------------------------------------------- */
   var contactForm = document.getElementById("contactForm");
   var formSuccess = document.getElementById("formSuccess");
-  var CONTACT_EMAIL = "harikumard07@gmail.com";
+  var CONTACT_EMAIL = "contact@harikumard.com";
 
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
@@ -186,16 +186,18 @@
         + "?subject=" + encodeURIComponent(subject)
         + "&body=" + encodeURIComponent(body);
 
+      /* Must navigate synchronously within this click handler — browsers only
+         allow mailto: (and similar) navigation while "user activation" is
+         active, which expires almost immediately. A setTimeout here, even a
+         short one, causes some browsers (notably Chrome on https/GitHub
+         Pages) to silently block the navigation. */
+      window.location.href = mailtoUrl;
+
       if (formSuccess) {
         formSuccess.classList.add("show");
         formSuccess.setAttribute("tabindex", "-1");
         formSuccess.focus();
       }
-
-      /* Give the confirmation a beat to render before handing off to the mail client */
-      window.setTimeout(function () {
-        window.location.href = mailtoUrl;
-      }, 300);
 
       contactForm.reset();
     });
