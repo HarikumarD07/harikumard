@@ -472,12 +472,14 @@
         <input type="file" id="profileFile" name="profileFile" accept="application/pdf" required>
       </div>
       <div class="modal-actions">
-        <button type="submit" class="btn btn-gold btn-sm">Save profile</button>
-        <button type="button" id="profileRemoveBtn" class="btn btn-outline btn-sm">Remove uploaded file</button>
+        <button type="submit" class="btn btn-gold btn-sm" id="profileSubmitBtn">Upload to GitHub</button>
       </div>
       <p class="modal-feedback" id="profileModalFeedback" role="status"></p>
     </form>
-    <p class="modal-disclaimer">This is a static, backend-free site, so this password check runs in the browser and is a convenience gate, not real security — anyone who reads the page source can see it. Do not use this to protect confidential documents.</p>
+    <p class="modal-disclaimer">
+      This is a static, backend-free site, so the password check runs in the browser and is a convenience gate, not real security. The token you paste in is never stored in the site's source — it only lives in this browser tab while you're using it, and is not persisted anywhere. Use a
+      <strong>fine-grained GitHub token</strong> scoped to only this repository with <strong>Contents: Read and write</strong> permission and a short expiry, and avoid sharing your screen while this field is filled in. See the README for full setup steps.
+    </p>
   </div>
 </div>
 
