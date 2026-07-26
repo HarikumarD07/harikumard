@@ -278,7 +278,7 @@ section { position: relative; padding: clamp(4rem, 8vw, 7rem) 0; }
 .hero {
   position: relative;
   background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 62%, var(--navy-soft) 100%);
-  color: var(--white);
+  color: var(--gold);
   overflow: hidden;
   padding: clamp(5rem, 12vw, 9rem) 0 clamp(4rem, 8vw, 6rem);
 }
